@@ -1,13 +1,13 @@
 class Api::V1::CustomersController < ApplicationController
     before_action :define_current_customer
-    
+
     def create
         customer = Customer.create(customer_params)
         render json: customer
     end
 
     def show
-        render json: current_customer
+        render json: current_customer, include: [ :quotes ]
     end
     
     # def index
