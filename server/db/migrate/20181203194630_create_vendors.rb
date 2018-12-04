@@ -5,8 +5,8 @@ class CreateVendors < ActiveRecord::Migration[5.2]
       t.string :location
       t.string :phone
       t.string :service
-      t.string :img_url
       t.string :website
+      t.string :logo_img
       t.string :description
       t.integer :price_range
 
