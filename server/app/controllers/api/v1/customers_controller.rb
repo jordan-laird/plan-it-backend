@@ -10,9 +10,9 @@ class Api::V1::CustomersController < ApplicationController
         render json: current_customer, include: [ :quotes ]
     end
     
-    # def index
-    #     render json: Customer.all
-    # end
+    def index
+        render json: Customer.all
+    end
     
     def update
         current_customer.update(customer_params)

@@ -6,13 +6,13 @@ class Api::V1::QuotesController < ApplicationController
         render json: quote
     end
 
-    # def show
-    #     render json: current_quote
-    # end
+    def show
+        render json: current_quote
+    end
     
-    # def index
-    #     render json: Quote.all
-    # end
+    def index
+        render json: Quote.all
+    end
     
     def update
         current_quote.update(quote_params)
