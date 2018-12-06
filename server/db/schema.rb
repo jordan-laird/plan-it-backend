@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_05_051751) do
+ActiveRecord::Schema.define(version: 2018_12_06_200637) do
 
   create_table "customers", force: :cascade do |t|
     t.string "name"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 2018_12_05_051751) do
     t.integer "guestCount"
     t.integer "budget"
     t.string "comments"
+    t.string "status", default: "pending"
+    t.string "response"
     t.index ["customer_id"], name: "index_quotes_on_customer_id"
     t.index ["vendor_id"], name: "index_quotes_on_vendor_id"
   end
