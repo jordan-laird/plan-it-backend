@@ -13,7 +13,7 @@ Customer.destroy_all
 Quote.destroy_all
 
 50.times do 
-    v = Vendor.create(name: Faker::Name.name, location: "#{Faker::Address.city}, #{Faker::Address.state}", phone: Faker::PhoneNumber.cell_phone, service: services_offered.sample, website: Faker::Internet.url, email: Faker::Internet.email, description: Faker::Company.catch_phrase, price_range: [1,2,3,4,5].sample)
+    v = Vendor.create(name: Faker::Name.name, location: "#{Faker::Address.city}, #{Faker::Address.state}", phone: Faker::PhoneNumber.cell_phone, service: services_offered.sample, website: Faker::Internet.url, email: Faker::Internet.email, description: Faker::Company.catch_phrase, price_range: ["$","$$","$$$","$$$$","$$$$$"].sample)
     case v.service
     when "Decoration"
         v.update(logo_img: decoration_photos.sample)

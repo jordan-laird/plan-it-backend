@@ -8,7 +8,7 @@ class CreateVendors < ActiveRecord::Migration[5.2]
       t.string :website
       t.string :logo_img
       t.string :description
-      t.integer :price_range
+      t.string :price_range
 
       t.timestamps
     end
