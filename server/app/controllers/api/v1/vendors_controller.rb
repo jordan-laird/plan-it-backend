@@ -35,6 +35,6 @@ class Api::V1::VendorsController < ApplicationController
     end
     
     def vendor_params
-        params.require(:vendor).permit(:name, :location, :phone, :logo_img, :website, :service, :description, :price_range, :email)
+        params.require(:vendor).permit(:name, :city, :state, :phone, :logo_img, :website, :service, :description, :price_range, :email)
     end
 end
