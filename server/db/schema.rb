@@ -43,7 +43,8 @@ ActiveRecord::Schema.define(version: 2018_12_05_051751) do
 
   create_table "vendors", force: :cascade do |t|
     t.string "name"
-    t.string "location"
+    t.string "city"
+    t.string "state"
     t.string "phone"
     t.string "service"
     t.string "website"
