@@ -35,7 +35,7 @@ class Api::V1::QuotesController < ApplicationController
     end
     
     def quote_params
-        params.require(:quote).permit(:event_date)
+        params.require(:quote).permit(:event_date, :customer_id, :vendor_id, :budget, :comments, :guestCount, :response, :status)
     end
 
 end

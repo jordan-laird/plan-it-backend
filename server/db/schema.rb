@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_05_051751) do
+ActiveRecord::Schema.define(version: 2018_12_06_200637) do
 
   create_table "customers", force: :cascade do |t|
     t.string "name"
@@ -23,12 +23,14 @@ ActiveRecord::Schema.define(version: 2018_12_05_051751) do
   create_table "quotes", force: :cascade do |t|
     t.integer "customer_id"
     t.integer "vendor_id"
-    t.datetime "event_date"
+    t.string "event_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "guestCount"
     t.integer "budget"
     t.string "comments"
+    t.string "status", default: "pending"
+    t.string "response"
     t.index ["customer_id"], name: "index_quotes_on_customer_id"
     t.index ["vendor_id"], name: "index_quotes_on_vendor_id"
   end
@@ -43,13 +45,14 @@ ActiveRecord::Schema.define(version: 2018_12_05_051751) do
 
   create_table "vendors", force: :cascade do |t|
     t.string "name"
-    t.string "location"
+    t.string "city"
+    t.string "state"
     t.string "phone"
     t.string "service"
     t.string "website"
     t.string "logo_img"
     t.string "description"
-    t.integer "price_range"
+    t.string "price_range"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email"
