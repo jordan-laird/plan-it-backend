@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2018_12_06_200637) do
   create_table "quotes", force: :cascade do |t|
     t.integer "customer_id"
     t.integer "vendor_id"
-    t.string "event_date"
+    t.datetime "event_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "guestCount"
@@ -45,14 +45,13 @@ ActiveRecord::Schema.define(version: 2018_12_06_200637) do
 
   create_table "vendors", force: :cascade do |t|
     t.string "name"
-    t.string "city"
-    t.string "state"
+    t.string "location"
     t.string "phone"
     t.string "service"
     t.string "website"
     t.string "logo_img"
     t.string "description"
-    t.string "price_range"
+    t.integer "price_range"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email"
